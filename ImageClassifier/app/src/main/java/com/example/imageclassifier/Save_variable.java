@@ -37,11 +37,7 @@ public class Save_variable extends AppCompatActivity {
         made_v.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                Fragment1 fragment1 = new Fragment1();
-                transaction.replace(R.id.frame,fragment1);
-                transaction.addToBackStack(null);
-                transaction.commit();
+
             }
         });
 
@@ -49,11 +45,7 @@ public class Save_variable extends AppCompatActivity {
         result_v.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                Fragment2 fragment2 = new Fragment2();
-                transaction.replace(R.id.frame,fragment2);
-                transaction.addToBackStack(null);
-                transaction.commit();
+
             }
         });
 
