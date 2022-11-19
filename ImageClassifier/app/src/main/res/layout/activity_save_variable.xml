@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Save_variable"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="70dp"
+        android:background="@drawable/edge">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/bmdohyeon"
+            android:paddingTop="15dp"
+            android:paddingLeft="15dp"
+            android:text="변수목록"
+            android:textSize="30dp"
+            />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+
+            android:paddingTop="15dp"
+            android:paddingStart="25dp"
+            android:layout_marginStart="140dp"
+            android:text="저장"
+            android:textSize="30dp"
+            android:fontFamily="@font/bmdohyeon"
+            android:clickable="true"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        >
+
+        <Button
+            android:id="@+id/made_v"
+            android:layout_width="195dp"
+            android:layout_height="match_parent"
+            android:text="생성변수"
+            android:textSize="40dp"
+            android:paddingTop="5dp"
+            android:fontFamily="@font/bmdohyeon"
+            android:background="@drawable/edge"/>
+
+        <Button
+            android:id="@+id/result_v"
+            android:layout_width="195dp"
+            android:layout_height="match_parent"
+            android:text="결과변수"
+            android:textSize="40dp"
+            android:paddingTop="5dp"
+            android:fontFamily="@font/bmdohyeon"
+            android:background="@drawable/edge"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="390dp"
+        android:layout_height="380dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ScrollView>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="390dp"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/add_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="+"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/bmdohyeon"
+                android:background="#ff9f0f"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/retouch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="수정"
+                android:textSize="25dp"/>
+
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="삭제"
+                android:textSize="25dp"/>
+
+            <Button
+                android:id="@+id/come_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="돌아가기"
+                android:textSize="23dp"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

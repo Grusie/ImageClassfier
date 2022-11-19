@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CodeGenerator"
+    android:orientation="vertical"  >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <ImageButton
+            android:id="@+id/home1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_baseline_home_24"
+            android:tooltipText="메인메뉴"/>
+
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="570dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="570dp"
+        >
+
+        <Button
+            android:id="@+id/btnVariable1"
+            android:layout_width="55dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/btn_bg_ex"
+            android:fontFamily="@font/bmdohyeon"
+            android:tooltipText="1" />
+
+        <TextView
+            android:id="@+id/operator1"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="145dp"
+            android:layout_marginTop="95dp"
+            android:background="@drawable/edge"
+            android:paddingStart="36dp"
+            android:text="+"
+            android:textSize="50dp" />
+
+        <Button
+            android:id="@+id/btnVariable2"
+            android:layout_width="55dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="280dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/btn_bg_ex"
+            android:fontFamily="@font/bmdohyeon"
+            android:tooltipText="2" />
+
+
+
+
+    </RelativeLayout>
+</ScrollView>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnReCapture"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginBottom="88dp"
+            android:background="@drawable/btn_bg_ex"
+            android:fontFamily="@font/bmdohyeon"
+            android:text="도형사진다시찍으러가기"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnToResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="36dp"
+            android:background="@drawable/btn_bg_ex"
+            android:fontFamily="@font/bmdohyeon"
+            android:text="완료"
+            app:layout_constraintBottom_toBottomOf="@+id/btnReCapture"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnReCapture" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+</LinearLayout>
