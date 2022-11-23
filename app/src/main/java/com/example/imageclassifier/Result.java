@@ -22,17 +22,9 @@ public class Result extends AppCompatActivity {
             startActivity(i);
         });
 
-        Button btnReCapture = findViewById(R.id.btnReCapture);
-        btnReCapture.setOnClickListener(view -> {
-            Intent i = new Intent(Result.this, CameraActivity.class);
-            startActivity(i);
-        });
 
-        Button btnToCodeGenerator = findViewById(R.id.btnToCodeGenerator);
-        btnToCodeGenerator.setOnClickListener(view -> {
-            Intent i = new Intent(Result.this, CodeGenerator.class);
-            startActivity(i);
-        });
+
+
 
         Button exitBtn = findViewById(R.id.exitBtn);
         exitBtn.setOnClickListener(new View.OnClickListener(){
