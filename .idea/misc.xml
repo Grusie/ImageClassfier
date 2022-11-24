@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ihejo/AndroidStudioProjects/ImageClassfier/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.1495" />
+        <entry key="..\:/Users/ihejo/AndroidStudioProjects/ImageClassfier/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1495" />
+        <entry key="..\:/Users/ihejo/AndroidStudioProjects/ImageClassfier/app/src/main/res/drawable/ic_baseline_keyboard_arrow_down_24.xml" value="0.1495" />
+        <entry key="..\:/Users/ihejo/AndroidStudioProjects/ImageClassfier/app/src/main/res/drawable/ic_baseline_keyboard_arrow_up_24.xml" value="0.1495" />
         <entry key="..\:/Users/ihejo/AndroidStudioProjects/ImageClassfier/app/src/main/res/layout/activity_camera.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/ihejo/AndroidStudioProjects/ImageClassfier/app/src/main/res/layout/activity_code_generator.xml" value="0.2" />
         <entry key="..\:/Users/ihejo/AndroidStudioProjects/ImageClassfier/app/src/main/res/layout/activity_gallery.xml" value="0.24947916666666667" />
