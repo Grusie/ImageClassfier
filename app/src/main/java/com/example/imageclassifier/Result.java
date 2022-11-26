@@ -6,10 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.NestedScrollView;
 
 public class Result extends AppCompatActivity {
+
+    int i = 1;
+    NestedScrollView nsc_view;
+    ImageButton btn_Hide;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +27,6 @@ public class Result extends AppCompatActivity {
             Intent i = new Intent(Result.this, MainActivity.class);
             startActivity(i);
         });
-
-
-
 
 
         Button exitBtn = findViewById(R.id.exitBtn);
@@ -51,5 +54,26 @@ public class Result extends AppCompatActivity {
                 alert.show();
             }
         });
+
+        nsc_view = findViewById(R.id.nsc_view);
+        btn_Hide = findViewById(R.id.btn_Hide);
+
+        nsc_view.setVisibility(View.VISIBLE);
+
+        btn_Hide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                i = 1 - i;
+                if(i == 0){
+                    nsc_view.setVisibility(View.GONE);
+                    btn_Hide.setImageResource(R.drawable.ic_baseline_keyboard_arrow_down_24);
+                }
+                else{
+                    nsc_view.setVisibility(View.VISIBLE);
+                    btn_Hide.setImageResource(R.drawable.ic_baseline_keyboard_arrow_up_24);
+                }
+            }
+        });
     }
+
 }
