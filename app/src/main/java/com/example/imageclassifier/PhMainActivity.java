@@ -49,7 +49,7 @@ public class PhMainActivity extends AppCompatActivity {
         nameList.add("emoji_u1f621");
         nameList.add("emoji_u1f622");
         nameList.add("emoji_u1f623");
-
+/*
         // Recycler view
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
 
@@ -59,6 +59,6 @@ public class PhMainActivity extends AppCompatActivity {
 
         // Layout manager 추가
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setLayoutManager(layoutManager);*/
     }
 }

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,11 +17,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.imageclassifier.Data.VariableData;
+
 
 public class CodeGenerator extends AppCompatActivity {
     TextView intentValue;
     Button btnVariable1, btnVariable2, btnReCapture;
     Toolbar toolbar;
+    VariableData var1, var2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,23 +46,27 @@ public class CodeGenerator extends AppCompatActivity {
                     @Override
                     public void onActivityResult(ActivityResult result) {
                         if (result.getResultCode() == Activity.RESULT_OK) {
-                            if (result.getData().getStringExtra("var") != null)
-                                btnVariable1.setText(result.getData().getStringExtra("var"));
-                            else
-                                btnVariable2.setText(result.getData().getStringExtra("var2"));
+                            if (result.getData().getSerializableExtra("var1") != null) {
+                                var1 = (VariableData) result.getData().getSerializableExtra("var1");
+                                btnVariable1.setText(var1.getVariableName());
+                            }
+                            else{
+                                var2 = (VariableData) result.getData().getSerializableExtra("var2");
+                                btnVariable2.setText(var2.getVariableName());
+                            }
                         }
                     }
                 });
 
         btnVariable1.setOnClickListener(view -> {
             Intent i = new Intent(this,Save_variable.class);
-            i.putExtra("var", "");
+            i.putExtra("var", "var1");
             startActivityResult.launch(i);
         });
 
         btnVariable2.setOnClickListener(view -> {
             Intent i = new Intent(this,Save_variable.class);
-            i.putExtra("var2", "");
+            i.putExtra("var", "var2");
             startActivityResult.launch(i);
         });
 

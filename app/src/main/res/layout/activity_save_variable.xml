@@ -21,7 +21,7 @@
         app:layout_constraintTop_toBottomOf="@id/save_variable_toolbar">
 
         <Button
-            android:id="@+id/made_v"
+            android:id="@+id/made_variable_btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -31,7 +31,7 @@
             android:textSize="@dimen/large_font_size" />
 
         <Button
-            android:id="@+id/result_v"
+            android:id="@+id/result_variable_btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -57,7 +57,7 @@
             android:layout_weight="14" />
 
         <Button
-            android:id="@+id/add_list"
+            android:id="@+id/add_variable_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -65,19 +65,18 @@
             android:fontFamily="@font/bmdohyeon"
             android:text="+"
             android:textAlignment="center"
-            android:textSize="40dp" />
+            android:textSize="@dimen/large_font_size" />
     </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/save_variable_navi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="3"
+        android:weightSum="2"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <Button
-            android:id="@+id/retouch"
+            android:id="@+id/modify_variable_btn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -85,20 +84,13 @@
             android:textSize="@dimen/base_font_size" />
 
         <Button
-            android:id="@+id/delete"
+            android:id="@+id/remove_variable_btn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="삭제"
             android:textSize="@dimen/base_font_size" />
 
-        <Button
-            android:id="@+id/come_back"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="돌아가기"
-            android:textSize="@dimen/base_font_size" />
 
     </LinearLayout>
 
