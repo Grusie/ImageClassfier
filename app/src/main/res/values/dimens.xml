@@ -6,4 +6,5 @@
     <dimen name="large_padding">16dp</dimen>
     <dimen name="base_font_size">16sp</dimen>
     <dimen name="large_font_size">24sp</dimen>
+    <dimen name="padding">8dp</dimen>
 </resources>
