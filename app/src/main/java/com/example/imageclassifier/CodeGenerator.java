@@ -1,10 +1,8 @@
 package com.example.imageclassifier;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
@@ -76,7 +74,7 @@ public class CodeGenerator extends AppCompatActivity {
         });
 
         btnToResult.setOnClickListener(view -> {
-            Intent i = new Intent(this, Result.class);
+            Intent i = new Intent(this, Code_resultActivity.class);
             startActivity(i);
         });
 

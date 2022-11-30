@@ -1,10 +1,7 @@
 package com.example.imageclassifier;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnCodeResult = findViewById(R.id.btnCodeResult);
         btnCodeResult.setOnClickListener(view -> {
-            Intent i = new Intent(MainActivity.this, Result.class);
+            Intent i = new Intent(MainActivity.this, Code_resultActivity.class);
             startActivity(i);
         });
 

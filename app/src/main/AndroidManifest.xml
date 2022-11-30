@@ -27,7 +27,7 @@
             android:name=".CodeGenerator"
             android:exported="false" />
         <activity
-            android:name=".Result"
+            android:name=".Code_resultActivity"
             android:exported="false" />
         <activity
             android:name=".CameraActivity"

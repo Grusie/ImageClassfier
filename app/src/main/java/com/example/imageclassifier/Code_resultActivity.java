@@ -1,7 +1,5 @@
 package com.example.imageclassifier;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
@@ -15,14 +13,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.constraintlayout.widget.Guideline;
-import androidx.core.widget.NestedScrollView;
 
-public class Result extends AppCompatActivity {
+public class Code_resultActivity extends AppCompatActivity {
 
     int i = 1;
     ConstraintLayout nsc_view;
-    ImageButton btn_Hide;
+    ImageButton code_result_btn_hide;
     Toolbar toolbar;
 
     @Override
@@ -38,7 +34,7 @@ public class Result extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_result);
+        setContentView(R.layout.activity_code_result);
 
         toolbar = findViewById(R.id.activity_result_toolbar);
         setSupportActionBar(toolbar);
@@ -46,8 +42,8 @@ public class Result extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         getSupportActionBar().setTitle("결과");
 
-        nsc_view = findViewById(R.id.Ctr_layout);
-        btn_Hide = findViewById(R.id.btn_Hide);
+        nsc_view = findViewById(R.id.Code_result_ctr_layout);
+        code_result_btn_hide = findViewById(R.id.code_result_btn_hide);
 
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
@@ -58,50 +54,23 @@ public class Result extends AppCompatActivity {
 
         Button btnHome = findViewById(R.id.btnHome);
         btnHome.setOnClickListener(view -> {
-            Intent i = new Intent(Result.this, MainActivity.class);
+            Intent i = new Intent(Code_resultActivity.this, MainActivity.class);
             startActivity(i);
-        });
-
-
-        Button exitBtn = findViewById(R.id.exitBtn);
-        exitBtn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                AlertDialog.Builder builder = new AlertDialog.Builder(Result.this);
-                builder.setMessage("정말로 종료하시겠습니까?");
-                builder.setTitle("종료 알림창")
-                        .setCancelable(false)
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int i) {
-                                finish();
-                            }
-                        })
-                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int i) {
-                                dialog.cancel();
-                            }
-                        });
-                AlertDialog alert = builder.create();
-                alert.setTitle("종료 알림창");
-                alert.show();
-            }
         });
 
         nsc_view.setVisibility(View.VISIBLE);
 
-        btn_Hide.setOnClickListener(new View.OnClickListener() {
+        code_result_btn_hide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 i = 1 - i;
                 if(i == 0){
                     nsc_view.setVisibility(View.GONE);
-                    btn_Hide.setImageResource(R.drawable.ic_baseline_keyboard_arrow_down_24);
+                    code_result_btn_hide.setImageResource(R.drawable.ic_baseline_keyboard_arrow_down_24);
                 }
                 else{
                     nsc_view.setVisibility(View.VISIBLE);
-                    btn_Hide.setImageResource(R.drawable.ic_baseline_keyboard_arrow_up_24);
+                    code_result_btn_hide.setImageResource(R.drawable.ic_baseline_keyboard_arrow_up_24);
                 }
             }
         });
