@@ -8,4 +8,7 @@
     <color name="gray">#C0C0C0</color>
     <color name="light_gray">#E0E0E0</color>
     <color name="pink">#f8e0ec</color>
+    <color name = "heavyYellow">#fece2f</color>
+    <color name="lightYellow">#E6E5A3</color>
+    <color name="lightGreen">#BCEAD5</color>
 </resources>

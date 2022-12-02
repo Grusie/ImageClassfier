@@ -55,6 +55,7 @@ public class Code_resultActivity extends AppCompatActivity {
         Button btnHome = findViewById(R.id.btnHome);
         btnHome.setOnClickListener(view -> {
             Intent i = new Intent(Code_resultActivity.this, MainActivity.class);
+            finishAffinity();
             startActivity(i);
         });
 

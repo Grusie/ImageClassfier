@@ -77,6 +77,7 @@ public class ManualActivity extends AppCompatActivity {
         Button btn_exit = findViewById(R.id.btn_exit);
         btn_exit.setOnClickListener(view -> {
             Intent i = new Intent(ManualActivity.this,MainActivity.class);
+            finishAffinity();
             startActivity(i);
         });
     }

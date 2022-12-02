@@ -39,6 +39,7 @@ public class GalleryActivity extends AppCompatActivity {
 
         selectBtn.setOnClickListener(view -> {
             Intent i = new Intent(GalleryActivity.this, MainActivity.class);
+            finishAffinity();
             startActivity(i);
         });
 

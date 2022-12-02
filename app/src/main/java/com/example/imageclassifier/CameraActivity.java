@@ -14,6 +14,7 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.util.Pair;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.FileProvider;
 
@@ -42,6 +44,7 @@ public class CameraActivity extends AppCompatActivity {
     private ClassifierWithModel cls;
     private ImageView imageView;
     private TextView textView;
+    private Toolbar toolbar;
 
     Uri selectedImageUri;
 
@@ -56,7 +59,9 @@ public class CameraActivity extends AppCompatActivity {
             startActivity(i);
         });
 
-
+        toolbar = findViewById(R.id.camera_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         Button takeBtn = findViewById(R.id.takeBtn);
@@ -145,5 +150,15 @@ public class CameraActivity extends AppCompatActivity {
     protected void onDestroy() {
         cls.finish();
         super.onDestroy();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{
+                finish();
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

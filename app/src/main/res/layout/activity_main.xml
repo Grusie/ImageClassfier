@@ -7,42 +7,59 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="10">
 
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="388dp"
-        android:layout_height="522dp"
-        android:src="@drawable/_2022_11_04_22_47_19"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.203" />
+        android:background="@color/lightGreen"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:src="@drawable/_2022_11_04_22_47_19" />
 
     <LinearLayout
+        android:background="@color/light_gray"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        android:layout_weight="4">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="즐거운 코드들 \n함꼐 만들어봐요~"
+            android:textSize="@dimen/large_font_size"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/lightGreen"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
 
     <Button
         android:id="@+id/cameraBtn"
-        android:layout_width="139dp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
         android:background="@drawable/btn_bg_ex"
         android:fontFamily="@font/bmdohyeon"
-        android:text="도형사진찍으러가기"
+        android:text="도형사진\n찍으러가기"
 />
 
     <Button
         android:id="@+id/btnCodeResult"
-        android:layout_width="170dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="107dp"
-        android:layout_marginBottom="20dp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/base_margin"
         android:background="@drawable/btn_bg_ex"
         android:fontFamily="@font/bmdohyeon"
         android:text="내가 만든 코드 다시보기"
@@ -50,13 +67,13 @@
 
     <Button
         android:id="@+id/introduce"
-        android:layout_width="170dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="107dp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
         android:background="@drawable/btn_bg_ex"
-        android:text="사용 설명서"
-        android:fontFamily="@font/bmdohyeon"
-        tools:ignore="MissingConstraints" />
+        android:text="사용\n설명서"
+        android:fontFamily="@font/bmdohyeon" />
 
     </LinearLayout>
 
