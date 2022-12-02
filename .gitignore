@@ -62,6 +62,17 @@ gen-external-apklibs
 *.zip
 *.tar.gz
 *.rar
+*.lock
+fileHashes.bin
+executionHistory.bin
+file-system.probe
+fileHashes.bin
+ImageClassifier.app.main.iml
+md5-checksums.bin
+misc.xml
+outputFiles.bin
+resourceHashesCache.bin
+sha-1checksums.bin
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*

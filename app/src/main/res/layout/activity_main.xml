@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="즐거운 코드들 \n함꼐 만들어봐요~"
+            android:text="즐거운 코드들 \n함께 만들어봐요~"
             android:textSize="@dimen/large_font_size"
             android:textAlignment="center"/>
 
