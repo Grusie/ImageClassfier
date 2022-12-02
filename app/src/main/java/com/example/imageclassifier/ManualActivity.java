@@ -2,9 +2,11 @@ package com.example.imageclassifier;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -12,16 +14,24 @@ import me.relex.circleindicator.CircleIndicator3;
 
 public class ManualActivity extends AppCompatActivity {
 
-    private Button exitBtn;
+    private Toolbar toolbar;
     private ViewPager2 mPager;
     private FragmentStateAdapter pagerAdapter;
-    private int num_page = 4;
+    private int num_page = 6;
     private CircleIndicator3 mIndicator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manual);
+
+        /**
+         * 툴바
+         */
+
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.manual_toolbar);
+        setSupportActionBar(myToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); // 뒤로가기
 
         /**
          * 가로 슬라이드 뷰 Fragment
@@ -46,7 +56,7 @@ public class ManualActivity extends AppCompatActivity {
          */
 
         mPager.setCurrentItem(  1000); //시작 지점
-        mPager.setOffscreenPageLimit(4); //최대 이미지 수
+        mPager.setOffscreenPageLimit(5); //최대 이미지 수
         mPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -62,23 +72,32 @@ public class ManualActivity extends AppCompatActivity {
             }
         });
 
+
         Button galleryBtn = findViewById(R.id.galleryBtn);
         galleryBtn.setOnClickListener(view -> {
             Intent i = new Intent(ManualActivity.this, GalleryActivity.class);
             startActivity(i);
         });
 
-        Button cameraBtn = findViewById(R.id.cameraBtn);
-        cameraBtn.setOnClickListener(view -> {
+        Button manual_cameraBtn = findViewById(R.id.manual_cameraBtn);
+        manual_cameraBtn.setOnClickListener(view -> {
             Intent i = new Intent(ManualActivity.this, CameraActivity.class);
             startActivity(i);
         });
 
-        Button btn_exit = findViewById(R.id.btn_exit);
-        btn_exit.setOnClickListener(view -> {
-            Intent i = new Intent(ManualActivity.this,MainActivity.class);
-            finishAffinity();
-            startActivity(i);
-        });
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{
+
+                // 액티비티 이동
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+
+                return true;
+            }
+        }
+        return  super.onOptionsItemSelected(item);
     }
 }
