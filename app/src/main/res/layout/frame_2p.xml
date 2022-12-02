@@ -6,14 +6,13 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <TextView
-        android:text="2"
+    <ImageView
+        android:src="@drawable/example_0"
         android:layout_width="400dp"
-        android:layout_height="400dp"
-        android:textSize="50dp"
+        android:layout_height="500dp"
         android:gravity="center"
         android:textColor="#000000"
-        android:background="#F8BBD0"
+        android:background="#29BABA"
         />
 
 </LinearLayout>
