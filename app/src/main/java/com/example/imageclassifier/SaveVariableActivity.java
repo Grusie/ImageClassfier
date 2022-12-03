@@ -32,7 +32,7 @@ import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 
-public class Save_variable extends AppCompatActivity implements View.OnClickListener {
+public class SaveVariableActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Toolbar toolbar;
     private RecyclerView variableRecyclerView;

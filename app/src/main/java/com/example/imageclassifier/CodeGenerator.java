@@ -57,13 +57,13 @@ public class CodeGenerator extends AppCompatActivity {
                 });
 
         btnVariable1.setOnClickListener(view -> {
-            Intent i = new Intent(this,Save_variable.class);
+            Intent i = new Intent(this, SaveVariableActivity.class);
             i.putExtra("var", "var1");
             startActivityResult.launch(i);
         });
 
         btnVariable2.setOnClickListener(view -> {
-            Intent i = new Intent(this,Save_variable.class);
+            Intent i = new Intent(this, SaveVariableActivity.class);
             i.putExtra("var", "var2");
             startActivityResult.launch(i);
         });
