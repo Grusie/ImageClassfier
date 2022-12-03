@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Save_variable"
+            android:name=".SaveVariableActivity"
             android:exported="false" />
         <activity
             android:name=".ManualActivity"
